@@ -1,0 +1,97 @@
+
+
+.footer {
+    color: #000;
+    background: #fff;
+    font-size: 12px;
+    border-radius: 20px 20px 0 0;
+    @include adaptiv-value("padding", 20, 10, 0);  
+    @include adaptiv-value("padding-bottom", 40, 70, 0);   
+ 
+    &__wrapper{
+        display: flex;
+        flex: 0 1 50%;
+    
+    }
+    &__bottom{
+
+padding-top:20px;
+
+        display:flex;
+        justify-content: space-between;
+        .social{
+            display: flex;
+            gap: 1rem;
+        }
+    }
+    &__social{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        @include adaptiv-value("font-size", 14, 12, 0);  
+        align-items:end;
+        a{
+            color: $color-blue;
+        }
+    }
+    &__tel{
+        @include adaptiv-value("font-size", 20, 12, 0);   
+        a{
+            color: $color-blue;
+        }
+       
+    }
+&__menu{
+    li{
+        margin-bottom: 10px;
+    }
+    @include adaptiv-value("font-size", 16, 12, 0);
+    a{
+        color: $color-text-dark
+    }
+}
+    &__title{
+        @include adaptiv-value("font-size", 22, 16, 0);
+        margin-bottom: 20px;
+    }
+}
+
+.footer__cols {
+    display: flex;
+    @include adaptiv-value("gap", 20, 10, 0);
+    justify-content: space-between;
+    .license{
+        @include adaptiv-value("margin-bottom", 30, 15, 0);
+    }
+}
+.footer__col {
+    flex: 1 1 20%;
+    img{
+        max-width: 200px;
+        margin-bottom: 20px;
+    }
+    a{
+        color: $color-text-dark;
+    }
+}
+
+@media screen and (max-width: 655px) {
+    .footer{
+        &__social{
+            align-items: flex-start;
+        }
+        &__cols{
+        flex-direction: column;
+    }
+  
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .footer{
+    &__wrapper{
+        flex-direction: column;
+        gap: 1rem;
+    }
+    }
+}

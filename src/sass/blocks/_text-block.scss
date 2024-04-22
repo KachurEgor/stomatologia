@@ -1,0 +1,9 @@
+.text{
+  max-width: 795px;
+  margin: auto;
+  
+  text-align: center;
+  p{
+    @include adaptiv-value("font-size", 36, 20, 0);
+  }
+}

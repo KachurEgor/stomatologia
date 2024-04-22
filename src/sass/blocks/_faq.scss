@@ -1,0 +1,81 @@
+
+
+
+
+.faq {
+  @include adaptiv-value("padding-top", 100, 30, 0);
+  @include adaptiv-value("padding-bottom", 100, 30, 0);
+
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+&__title {
+  flex:0 1 20%
+}
+&__item {
+  flex: 0 1 70%;
+}
+
+.accordion {
+  background-color:transparent;
+    color: #fff;
+    cursor: pointer;
+    @include adaptiv-value("padding", 18, 10, 0);
+    width: 100%;
+    text-align: left;
+    outline: none;
+    @include adaptiv-value("font-size", 40, 20, 0);
+    transition: 0.4s;
+  }
+  
+  .accordion:after {
+    content: '\002B';
+    color: #fff;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+  .active:after {
+    content: "\2212";
+  }
+  
+  .panel {
+    padding: 0 18px;
+    border-bottom: 1px solid #fff;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    p{
+      margin-bottom: 20px;
+      @include adaptiv-value("font-size", 16, 14, 0);
+    }
+  }
+
+}
+
+.sticky {
+  position: fixed;
+  z-index: 101;
+}
+.stop {
+  position: relative;
+  z-index: 101;
+}
+
+
+@media screen and (max-width: 500px) {
+
+  .stick{
+    position: relative!important;
+  }
+.faq {
+.container {
+  display: block;
+ 
+}
+}
+}
+

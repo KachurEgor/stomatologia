@@ -1,0 +1,67 @@
+
+/*section {
+    height: 120vh;
+    margin: 0 30px;
+    margin-bottom: 50px;
+}
+*/
+
+
+  ::selection {
+    background: #fff;
+    color: #000;
+    mix-blend-mode: difference;
+  }
+  ::-moz-selection {
+    background: #fff;
+    color: #000;
+  }
+  
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+  
+  button {
+    border: 0;
+  }
+  
+  /*h1 {
+    position: sticky;
+    top: 2rem;
+    font-size: 2em;
+    margin: 0 0 0.5em;
+  }*/
+  
+  // h2 {
+  //   font-size: 40px;
+  //   text-transform: uppercase;
+  //   margin: 0;
+  // }
+  
+
+  .wrapper {
+    max-width: 1380px;
+    margin: 0 auto;
+  }
+  
+  
+  
+  .social-icon {
+      margin: 10px;
+      width: 40px; /* Adjust the size of the icons */
+      height: 40px;
+      border-radius: 50%;
+      background-color: #007bff; /* You can change the background color */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #000; /* Icon color */
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+  }
+  
+  .social-icon:hover {
+      background-color: #000; /* Change the background color on hover */
+  }
+  

@@ -1,0 +1,292 @@
+
+
+.page-dark {
+  background-color: #121212;
+  border-radius: 20px;
+@include adaptiv-value("padding", 30, 15, 0);
+}
+.small-cards {
+  display: flex;
+  //justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin: 30px auto;
+}
+
+.border {
+  height: 290px;
+  width: 260px;
+  background: transparent;
+  border-radius: 10px;
+  transition: border 1s;
+  position: relative;
+}
+
+.border:hover {
+  border: 1px solid #fff;
+}
+
+.border>h2 {
+ 
+  color: #fff;
+  @include adaptiv-value("font-size", 20, 14, 0);
+  margin: 20px;
+  margin-left: 10px;
+  opacity: 1;
+  transition: color 1s;
+  position: absolute;
+  bottom: 10px;
+}
+
+.card:hover h2 {
+  color: #007bff;
+}
+
+.card {
+  height: 300px;
+//width: 270px;
+ flex: 0 1 23%;
+  background: #808080;
+  border-radius: 10px;
+  transition: background 0.8s;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 70px 63px -60px #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.card:hover {
+  cursor: pointer;
+}
+
+.card-label {
+  position: absolute;
+  bottom: 0;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  @include adaptiv-value("font-size", 14, 12, 0);
+  transition: color 1s;
+  color: #007bff;
+}
+
+.card:hover .card-label {
+  transition: color 1s;
+  color: #fff;
+}
+
+.card0 {
+  background: url("https://i.pinimg.com/736x/8f/a0/51/8fa051251f5ac2d0b756027089fbffde--terry-o-neill-al-pacino.jpg") center center no-repeat;
+  background-size: 280px;
+}
+
+.card:hover h2 {
+  opacity: 1;
+}
+
+.card:hover .fa {
+  opacity: 1;
+}
+
+.card:hover {
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: 600px;
+}
+
+.card1 {
+  background: url("https://i.pinimg.com/originals/28/d2/e6/28d2e684e7859a0dd17fbd0cea00f8a9.jpg") center center no-repeat;
+  background-size: 280px;
+}
+
+.card2 {
+  background: url("https://i.pinimg.com/originals/ee/85/08/ee850842e68cfcf6e3943c048f45c6d1.jpg") center center no-repeat;
+  background-size: 280px;
+}
+
+
+
+.modal
+
+{
+  &-container {
+  display: flex;
+  padding: 10px 10px 40px 10px;
+  width: 770px;
+  background-color: #000;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.5s ease;
+  opacity: 1;
+  box-shadow: 0 70px 63px -60px #000;
+  display: none;
+  font-size: 16px;
+  z-index: 5000;
+.btn{
+  margin-top: 20px;
+  font-size: 12px;
+}
+}
+
+&__textblock{
+
+  margin-top: 20px;
+  padding-bottom: 30px;
+  padding-right: 10px
+}
+&__prof{
+  @include adaptiv-value("margin-bottom", 30, 15, 0);
+  @include adaptiv-value("font-size", 20, 15, 0);
+  color: rgba(255, 255, 255, 0.7);
+}
+&__years{
+  @include adaptiv-value("margin-bottom", 40, 15, 0);
+@include adaptiv-value("font-size", 16, 14, 0);
+span{
+  font-weight:700;
+}
+}
+&__educat{
+  @include adaptiv-value("margin-bottom", 40, 15, 0);
+  @include adaptiv-value("font-size", 16, 14, 0);
+  span{
+    text-decoration: underline;
+  }
+  }
+ 
+}
+.modal-bio {
+
+@include adaptiv-value("font-size", 16, 14, 0);
+flex: 1 1 40%;
+h3{
+  @include adaptiv-value("font-size", 28, 22, 0);
+  margin-bottom: 10px;
+}
+}
+
+.modal-content {
+width: 80%;
+margin: 0 auto;
+@include adaptiv-value("margin-top", 55, 30, 0);
+@include adaptiv-value("font-size", 16, 14, 0);
+}
+
+.bg {
+position: fixed;
+top: 0;
+left: 0;
+z-index: 1040;
+width: 100vw;
+height: 100vh;
+/*    background-color: rgba(0, 0, 0, 0.4);*/
+transition: backdrop-filter 2s;
+display: none;
+backdrop-filter: blur(5px);
+z-index: 2000;
+}
+
+.block {
+display: flex;
+flex-wrap: wrap;
+-webkit-animation: fadeEffect 0.5s ease-out;
+-moz-animation: fadeEffect 0.5s ease-out;
+-o-animation: fadeEffect 0.5s ease-out;
+animation: fadeEffect 0.5s ease-out;
+}
+
+.logo-stamp {
+background: url(../img/logo_bordered.svg) center center no-repeat;
+width: 60px;
+height: 77px;
+position: absolute;
+bottom: -40px;
+left: 20px;
+}
+
+.close-button {
+position: absolute;
+right: 15px;
+top: 15px;
+cursor: pointer;
+background: url(../img/close.svg) center center no-repeat;
+width: 24px;
+height: 24px;
+}
+
+.bordered-box {
+  display: flex;
+border: 1px solid #808080;
+border-radius: 16px;
+position: relative;
+}
+
+.bordered-box>img{
+  @include adaptiv-value("height", 340, 150, 0);
+  width: auto;
+  border-radius: 16px;
+  margin-right: 20px;
+}
+
+
+@media screen and (max-width: 1214px) {
+  .card {
+flex: 0 1 22%;
+  }
+}
+@media screen and (max-width: 991px) {
+  .logo-stamp{
+    background-size: 56%;
+  }
+  .modal-container{
+    width: 90%;
+  }
+  .card {
+flex: 0 1 30%;
+  }
+}
+@media screen and (max-width: 689px) {
+  .logo-stamp{
+    background-size: 36%;
+  }
+  .modal-content{
+    width: 100%;
+   }
+  .small-cards{
+   gap: 1rem;
+    justify-content: space-between;
+    margin: 0;
+  }
+  .card {
+flex: 0 1 47%;
+
+  }
+}
+@media screen and (max-width: 500px) {
+
+  .card {
+flex: 0 1 100%;
+margin: auto;
+
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .bordered-box{
+    flex-direction: column;
+  }
+  .bordered-box > img{
+    object-fit: contain;
+  }
+  .modal__textblock{
+    padding-left: 10px;
+  }
+}

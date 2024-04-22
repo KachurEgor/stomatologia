@@ -1,0 +1,278 @@
+
+  .reviews {
+  color: $color-text-dark;
+   background-color:$color-text-white;
+   .tabs-items {
+    //display: none;
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+    margin-left: 10%;
+  }
+   &__info{
+    padding: 20px 20px 10px 20px;
+   }
+   .swiper {
+
+		// .swiper__doctors
+    &__doctor{
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      img{
+        margin-right: 10px;
+      }
+      &-name{
+        color: $color-text-dark;
+        @include adaptiv-value("font-size", 14, 12, 0);
+      }
+      &-subname{
+        color:#6F6F6F;
+        font-size: 12px;
+        @include adaptiv-value("font-size", 12, 10, 0);
+      }
+    }
+		&__doctors {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      &-title{
+        margin-bottom: 10px;
+        @include adaptiv-value("font-size", 14, 12, 0);
+       
+      }
+      &-wrapper{
+        background-color: #F1F9F9;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 10px 20px 15px 20px;
+      }
+		}
+
+}
+
+   .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after,.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+    content:none
+}
+   .swiper-nav-wrapper{
+    bottom: 0;
+		display: flex;
+		align-items: center;
+    gap: 1rem;
+    margin-top: 30px;
+		width: auto;
+    
+   }
+   .swiper-button-prev, .swiper-button-next{
+    top: 0;
+    top: auto;
+    left: auto;
+    right: auto;
+    position: relative !important;
+    width: 48px;
+    height: 48px;
+    padding-top: 20px;
+    pointer-events: auto;
+   }
+.logo-white{
+  width: 61px;
+  height: 77px;
+  position:absolute;
+  top: 0%;
+  left:50%;
+  transform:translate(-50%, -50%);
+}
+
+   
+
+   .title-reviews {
+    text-align: center;
+    @include adaptiv-value("font-size", 40, 25, 0);
+  }
+  .reviews__mark {
+    text-align: center;
+    @include adaptiv-value("margin-bottom", 40, 25, 0);
+    p{
+
+      font-size: 16px;
+      color: $color-blue;
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+    .mark{
+      color:#FFB951;
+      @include adaptiv-value("font-size", 28, 25, 0);
+      font-weight: 800;
+      margin-left: 10px;
+      text-decoration: underline;
+    }
+  }
+
+    .swiper-slide {
+      max-width: 600px;
+      border: 1px solid #808080;
+      border-radius:20px      ;
+      -webkit-border-radius:20px      ;
+      -moz-border-radius:20px      ;
+      -ms-border-radius:20px      ;
+      -o-border-radius:20px      ;
+      overflow: visible;
+      margin-top: 40px;
+      img{
+        @include adaptiv-value("width", 42, 30, 0);  
+      }
+.top{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        
+        
+      }
+      .name {
+      
+        @include adaptiv-value("font-size", 16, 14, 0);  
+      }
+      .data {
+    
+        @include adaptiv-value("font-size", 14, 12, 0);  
+      }
+      display: block;
+    }
+    .swiper__reviews-item {
+@include adaptiv-value("font-size", 16, 14, 0);  
+color: $color-text-dark;
+min-height: 200px;
+      h4{
+        @include adaptiv-value("font-size", 22, 18, 0);  
+        margin-bottom: 10px;
+      }
+    }
+
+  }
+
+
+  /* Style the tab */
+.tab {
+  overflow: hidden;
+margin-bottom: 40px;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+   font-weight: 900;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 18px;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  text-decoration: none;
+  border-radius: 28px;
+  -webkit-border-radius: 28px;
+  -moz-border-radius: 28px;
+  -ms-border-radius: 28px;
+  -o-border-radius: 28px;
+  background-color: #fff;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: $color-blue;
+  color: $color-text-white;
+  border:1px solid transparent;
+  
+}
+
+/* Create an active/current tablink class */
+.tabs .tab{display:inline-block}
+
+            .tabs-items .item{display: none;
+            }
+            .tabs-items .item.on{display: block; 
+              -webkit-animation: fadeEffect 1s ease-out;
+              -moz-animation: fadeEffect 1s ease-out;
+              -o-animation: fadeEffect 1s ease-out;
+              animation: fadeEffect 1s ease-out;
+           
+              }
+
+.tablinks.on{ 
+  background-color: $color-blue;
+  color: $color-text-white;
+  border:1px solid transparent;
+  transition: 2s;
+ 
+}
+
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+  from {opacity: 0; }
+  to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0; }
+  to {opacity: 1;}
+}
+
+
+.button-wrapper {
+  width: 150px;
+  height: 42px;
+  background-color:$color-blue;
+  color: #fff;
+  border-radius: 100px;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+.button-text {
+  z-index: 1;
+  color:#fff;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  position: relative;
+  overflow: hidden;
+}
+@media screen and (max-width: 769px) {
+  
+  .reviews{
+    .tabs-items{
+    margin-left: 0;
+    padding-left: 10px;
+  }
+ .swiper__reviews-item {
+
+  min-height: auto;
+ }
+}
+  }
+
+@media screen and (max-width: 576px) {
+  .reviews .swiper-nav-wrapper{
+    justify-content: center;
+  }
+.reviews {
+  .swiper__doctors-wrapper{
+    padding: 10px;
+  }
+  .swiper-slide{
+  .top{
+  gap: 1rem;
+}
+.data{
+  svg{
+    width: 70px;
+  }
+}
+}
+}
+
+}

@@ -1,0 +1,47 @@
+
+
+.form {
+ 
+  &-container{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    background-color:$color-blue;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    @include adaptiv-value("padding", 30, 20, 0);
+    margin-bottom: 20px;
+    gap: 2rem;
+  }
+  &__inputs{
+    background-color:$color-text-white;
+    padding: 20px;
+    border-radius: 20px;
+    flex: 0 1 42%;
+  }
+  &__text{
+    flex:0 1 45%;
+    .title-h2{
+      @include adaptiv-value("font-size", 32, 20, 0);
+      margin-bottom: 20px
+    }
+    p{
+      @include adaptiv-value("font-size", 23, 16, 0);
+      margin-top: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 660px) {
+.form{
+
+&-container{
+  flex-direction: column;
+  
+}
+&__inputs{
+  width: 100%;
+}
+
+}
+}

@@ -1,0 +1,202 @@
+
+@import '../sass/mixins';
+@import '../sass/variables';
+@import '../sass/normalize'; 
+@import '../sass/blocks/etereo';
+@import '../sass/blocks/contacts';
+@import '../sass/blocks/header';
+@import '../sass/blocks/text-block';
+@import '../sass/blocks/doctors';
+@import '../sass/blocks/adventages';
+@import '../sass/blocks/services';
+@import '../sass/blocks/faq';
+@import '../sass/blocks/form';
+@import '../sass/blocks/work';
+@import '../sass/blocks/reviews';
+@import '../sass/blocks/call-to-action';
+@import '../sass/blocks/footer';
+@import '../sass/blocks/modal';
+
+
+
+html {
+    scroll-behavior: smooth;
+  }
+  
+a:hover{
+    color: $color-blue;
+    transition: 0.5s;
+  }
+img{
+    width: 100%;
+
+}
+
+body {
+    font-family: $fonts;
+    color: #ffffff;
+    font-weight: 300;
+    font-style: normal;
+    background-color: #1E1E1E;
+}
+
+* {
+    font-display: swap;
+    margin: 0;  
+}
+.container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 15px;
+
+}
+
+.section{
+     @include adaptiv-value("padding-top", 60, 30, 0);
+     @include adaptiv-value("padding-bottom", 60, 30, 0);
+}
+.title-h2{
+  @include adaptiv-value("font-size", 40, 25, 0);
+  font-weight: 300;
+  @include adaptiv-value("margin-bottom", 40, 20, 0);
+}
+.stick {
+ 
+  height: 65px;
+  position: sticky;
+  top: 20px;
+}
+.title2-h2{
+  text-align: center;
+}
+.topbar {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    margin-bottom: 20px;
+  &-logo{
+    margin-left: 40%;
+    
+  }
+  }
+  
+ 
+  
+  .topbar-social {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 10%;
+    flex: 0 1 10%;
+    margin-left: auto;
+    gap: 1rem;
+    display: flex;
+  }
+
+
+
+
+
+
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .modal__dialog {
+    max-width: 500px;
+    margin: 40px auto;
+  }
+  .modal__content {
+    position: relative;
+    width: 100%;
+    padding: 40px;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+  .modal__close {
+    position: absolute;
+    top: 8px;
+    right: 14px;
+    font-size: 30px;
+    color: #000;
+    opacity: 0.5;
+    font-weight: 700;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  .modal__title {
+    text-align: center;
+    font-size: 22px;
+    text-transform: uppercase;
+  }
+  .modal__input {
+    display: block;
+    margin: 20px auto 20px auto;
+    width: 280px;
+    height: 50px;
+    background: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border: none;
+    font-size: 18px;
+    text-align: center;
+    padding: 0 20px;
+    outline: 0;
+  }
+  .modal .btn {
+    display: block;
+    width: 280px;
+    margin: 0 auto;
+  }
+  .show {
+    display: block;
+  }
+  .hide {
+    display: none;
+  }
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  @keyframes fade {
+    from {
+      opacity: 0.1;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+
+  
+  @media screen and (max-width: 692px) {
+    .topbar-logo {
+      margin-left: 0;
+  }
+  }
+
+  @media screen and (max-width: 442px) {
+    .topbar-logo {
+     width: 97px;
+  }
+  }
+
+
+
+
+
+
+
+
+
+  

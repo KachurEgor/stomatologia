@@ -1,0 +1,247 @@
+
+.services__tabs{
+  .tabcontent {
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+  }
+ /* .tab-btn svg{
+    vertical-align: middle;
+    margin-right: 10px;
+  }*/
+}
+  .tab {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+&-bottom{
+display: flex;
+flex-wrap: wrap;
+align-items:center;
+justify-content: space-between;
+
+}
+&-card1{
+
+  background: url(../img/222.jpg) center no-repeat;
+}
+&-card2{
+  background: url(../img/111.jpg) center no-repeat;
+}
+&-card3{
+  background: url(../img/333.jpg) center no-repeat;
+}
+&-card4{
+  background: url(../img/444.jpg) center no-repeat;
+}
+&-card{
+ background-size: cover;
+  height: 404px;
+  border-radius:20px;
+overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 285px;
+ hr{
+  width: 65px;
+  margin: auto;
+  border:none;
+  background-color:$color-blue;
+  height: 1px;
+ }
+}
+
+&-contents{
+  display: flex;
+justify-content: space-between;
+gap:2rem
+}
+    
+  &-cards {
+display: flex;
+//justify-content: space-between;
+gap: 1rem;
+flex-wrap: wrap;
+.price{
+  padding: 12px;
+  display: flex;align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.title-card {
+  text-align: center;
+  padding: 20px 12px 0 12px;
+      h3 {
+        color: white;
+        @include adaptiv-value("font-size", 20, 16, 0);
+        margin-bottom: 20px;
+        font-weight: 100;
+        text-transform: uppercase;
+        height: 40px;
+      }
+      
+    }
+  }
+  
+  &-intro {
+
+    font-size: 12px;
+    margin-top: 20px;
+    color: #ffffffab;
+  }
+ 
+ &-price {
+font-size: 12px;
+  }
+
+  }
+
+  .tab .tab-btn  {
+  display: flex;
+  align-items:center;
+  padding: 15px 30px;
+  @include adaptiv-value("font-size",18, 14, 0);
+  cursor: pointer;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+  text-decoration: none;
+  //border: 1px solid #fff;
+  border-radius:28px;
+  -webkit-border-radius:28px;
+  -moz-border-radius:28px;
+  -ms-border-radius:28px;
+  -o-border-radius:28px;
+  background-color: #121212;
+  color: #fff;
+  border: 1px solid transparent;
+  
+ /* backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);*/
+}
+
+.doctors-card {
+  flex: 1 1 100%;
+  margin-bottom: 20px;
+&__title{
+  padding-left: 12px;
+  padding-right: 12px;
+}
+  p{
+    margin-bottom: 10px;
+    font-size: 12px;
+
+  }
+
+  // .doctors-card__wrappers
+  &__wrappers{
+    display: flex;
+    overflow: scroll;
+    -ms-overflow-style: none;  /* IE и Edge */
+    scrollbar-width: none;  /* Firefox */
+    max-width: 264px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    gap: 1rem;
+
+  }
+  &__bloor{
+    backdrop-filter: blur(25px);
+background: rgba(255, 255, 255, 0.01);
+overflow: hidden;
+  }
+  // .doctors-card__wrapper
+
+  &__wrapper {
+    display: flex;
+    font-family: $fonts;
+  .doctors-card__item{
+   cursor: pointer;
+      display: flex;
+      justify-content: center;
+      width: auto;
+      p{
+        display: block; 
+        margin: auto 0;
+        margin-left: 5px;
+        font-size: 10px;
+        color: $color-text-white;
+      }
+    }
+    img{
+      border-radius: 50%;
+      width: 30px;
+      margin-right: 5px;
+    }
+  }
+
+  // .doctors-card__item
+
+  &__item {
+  }
+}
+@media screen and (max-width: 690px) {
+ .tab{
+  gap: 1rem;
+ }
+ .tab .tab-btn {
+  padding: 12px 20px;
+ }
+}
+
+@media screen and (max-width: 1200px) {
+  .doctors-card__wrappers{
+    max-width: 293px;
+  }
+  .tab-card {
+    width: 314px;
+ }
+}
+@media screen and (max-width: 992px) {
+  .doctors-card__wrappers{
+    max-width: 240px;
+  }
+  .tab-card {
+    width: 260px;
+    height: 410px;
+ }
+}
+@media screen and (max-width: 830px) {
+  .doctors-card__wrappers{
+    max-width: 220px;
+  }
+  .tab-card {
+    width: 239px;
+    height: 400px;
+ }
+}
+@media screen and (max-width: 762px) {
+  .doctors-card__wrappers{
+    max-width: 287px;
+  }
+  .tab-card {
+    width: 308px;
+    height: 380px;
+ }
+}
+@media screen and (max-width: 655px) {
+  .doctors-card__wrappers{
+    max-width: 240px;
+  }
+  .tab-card {
+    width: 267px;
+    height: 390px;
+ }
+}
+@media screen and (max-width: 576px) {
+  .doctors-card__wrappers{
+    max-width: 280px;
+  }
+  .tab-cards{
+    justify-content: center;
+  }
+  .tab-card {
+    width: 300px;
+ }
+}
