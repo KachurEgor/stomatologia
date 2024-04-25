@@ -2,6 +2,9 @@
   .reviews {
   color: $color-text-dark;
    background-color:$color-text-white;
+   border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+   overflow: hidden;
    .tabs-items {
     //display: none;
     -webkit-animation: fadeEffect 1s;
@@ -12,7 +15,7 @@
     padding: 20px 20px 10px 20px;
    }
    .swiper {
-
+    overflow: visible;
 		// .swiper__doctors
     &__doctor{
       display: flex;
@@ -42,8 +45,8 @@
       }
       &-wrapper{
         background-color: #F1F9F9;
-        margin-top: 20px;
-        margin-bottom: 20px;
+        @include adaptiv-value("margin-bottom", 20, 5, 0);
+        @include adaptiv-value("margin-top", 20, 5, 0);
         padding: 10px 20px 15px 20px;
       }
 		}
@@ -58,7 +61,7 @@
 		display: flex;
 		align-items: center;
     gap: 1rem;
-    margin-top: 30px;
+    @include adaptiv-value("margin-top", 30, 10, 0);
 		width: auto;
     
    }
@@ -87,21 +90,23 @@
    .title-reviews {
     text-align: center;
     @include adaptiv-value("font-size", 40, 25, 0);
+    font-family: $fonts-inter;
+    font-weight: 600;
   }
   .reviews__mark {
     text-align: center;
-    @include adaptiv-value("margin-bottom", 40, 25, 0);
+    @include adaptiv-value("margin-bottom", 40, 10, 0);
     p{
 
       font-size: 16px;
       color: $color-blue;
-      margin-bottom: 10px;
-      margin-top: 10px;
+      @include adaptiv-value("margin-bottom", 10, 5, 0);
+      @include adaptiv-value("margin-top", 10, 5, 0);
     }
     .mark{
       color:#FFB951;
       @include adaptiv-value("font-size", 28, 25, 0);
-      font-weight: 800;
+      font-weight: 600;
       margin-left: 10px;
       text-decoration: underline;
     }
@@ -153,12 +158,12 @@ min-height: 200px;
   /* Style the tab */
 .tab {
   overflow: hidden;
-margin-bottom: 40px;
+  @include adaptiv-value("margin-bottom", 40, 10, 0);  
 }
 
 /* Style the buttons that are used to open the tab content */
 .tab button {
-   font-weight: 900;
+   font-weight: 700;
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -246,7 +251,8 @@ margin-bottom: 40px;
   .reviews{
     .tabs-items{
     margin-left: 0;
-    padding-left: 10px;
+    padding-left: 1px;
+    padding-right: 3px;
   }
  .swiper__reviews-item {
 
@@ -274,5 +280,7 @@ margin-bottom: 40px;
 }
 }
 }
-
+.tab button {
+  padding: 5px 20px;
+}
 }

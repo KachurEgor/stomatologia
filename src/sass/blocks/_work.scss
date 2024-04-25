@@ -282,6 +282,7 @@ margin: 0;
   border-radius: 0%;
   width: 14px;
   height: 14px;
+  border-radius: 50%;
   display: inline-block;
   background: #fff;
   opacity: 0.4;
@@ -736,8 +737,7 @@ button.swiper-pagination-bullet {
 }
 
 .swiper-pagination-vertical.swiper-pagination-bullets, .swiper-vertical>.swiper-pagination-bullets{
-  top: auto;
-  bottom: 0%;
+  top: 5%;
 }
 @-webkit-keyframes swiper-preloader-spin {
   100% {
@@ -768,7 +768,7 @@ button.swiper-pagination-bullet {
   }
   #home-slider{
     height: 70vh;
-    width: 96vw;
+    width: 100vw;
   }
   .swiper-image .posle{
     left: auto;
@@ -781,6 +781,9 @@ button.swiper-pagination-bullet {
   }
   .swiper-image {
     height: 50%;
+  }
+  .swiper-pagination-vertical.swiper-pagination-bullets, .swiper-vertical>.swiper-pagination-bullets{
+    top: 10%;
   }
 }
 

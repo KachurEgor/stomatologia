@@ -63,6 +63,7 @@ display: flex;
 //justify-content: space-between;
 gap: 1rem;
 flex-wrap: wrap;
+justify-content: space-between;
 .price{
   padding: 12px;
   display: flex;align-items: center;
@@ -101,7 +102,7 @@ font-size: 12px;
   display: flex;
   align-items:center;
   padding: 15px 30px;
-  @include adaptiv-value("font-size",18, 14, 0);
+  @include adaptiv-value("font-size",18, 11, 0);
   cursor: pointer;
   transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
   text-decoration: none;
@@ -138,24 +139,32 @@ font-size: 12px;
     overflow: scroll;
     -ms-overflow-style: none;  /* IE и Edge */
     scrollbar-width: none;  /* Firefox */
+    overflow: auto;
     max-width: 264px;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 10px;
     padding-right: 10px;
     gap: 1rem;
-
-  }
+      
+}
+  &__wrappers::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+}
+  
   &__bloor{
     backdrop-filter: blur(25px);
-background: rgba(255, 255, 255, 0.01);
-overflow: hidden;
+    background: rgba(255, 255, 255, 0.01);
+    overflow: hidden;
   }
+
   // .doctors-card__wrapper
 
   &__wrapper {
     display: flex;
     font-family: $fonts;
+  }
   .doctors-card__item{
    cursor: pointer;
       display: flex;
@@ -176,17 +185,14 @@ overflow: hidden;
     }
   }
 
-  // .doctors-card__item
 
-  &__item {
-  }
-}
 @media screen and (max-width: 690px) {
  .tab{
-  gap: 1rem;
+  @include adaptiv-value("gap",10, 2, 0);
+  row-gap: 10px;
  }
  .tab .tab-btn {
-  padding: 12px 20px;
+  padding: 12px 5px;
  }
 }
 

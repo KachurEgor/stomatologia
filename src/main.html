@@ -5,7 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="sass/style.css">
-  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <div id="body" style="margin: 0">
   <div class="bg"></div>
@@ -635,7 +640,7 @@
 
   <!--Блок контакты с картой-->
   <section class="contacts" id="contacts">
-      <div class="contacts__wrapper">
+      <div class=" container contacts__wrapper">
         <div class="contacts__item">
           <h2>Контакты</h2>
           <p><img src="img/icons/geo.svg" alt="geo">г. Тверь ул. Труда д. 7</p>
@@ -1753,11 +1758,11 @@ Google</button>
           <img src="img/logo_full_black.svg" alt="logo full">
           <p class="license">OOO Центр Эстетической Стоматологии «ИТЕРИО» Лицензия ЛО-77-01-014897 от 26 сентября 2017
           </p>
-          <a href="#">Политика конфиденциальности</a>
+          <a class="politick" href="#">Политика конфиденциальности</a>
         </div>
         
         <div class="footer__wrapper">
-        <div class="footer__col">
+        <div class="footer__colonka">
           <p class="footer__title">Услуги</p>
           <ul class="footer__menu">
             <li><a href="#">Эстетическая стоматология</a></li>
@@ -1767,7 +1772,7 @@ Google</button>
             <li><a href="#">Хирургия</a></li>
           </ul>
         </div>
-        <div class="footer__col">
+        <div class="footer__colonka">
           <p class="footer__title">О клинике</p>
           <ul class="footer__menu">
             <li><a href="#">Наша команда</a></li>
@@ -1784,7 +1789,9 @@ Google</button>
           <a class="footer__mail" href="mailto:mail@etereo.ru">mail@etereo.ru</a>
         </div>
       </div>
-
+      <p class="license2">OOO Центр Эстетической Стоматологии «ИТЕРИО» Лицензия ЛО-77-01-014897 от 26 сентября 2017
+      </p>
+      <a class="politick2"href="#">Политика конфиденциальности</a>
       <div class="footer__bottom">
         <p>© 2024 etereo dental clinic</p>
 
@@ -1958,142 +1965,6 @@ Google</button>
 </div>
 
 
-<!--
-<style>
-  .car {
-    font-weight: bold;
-    padding: 1em;
-    text-align: right;
-    color: #181a1a;
-    
-    width:  300px;
-    height: 400px;
-    box-shadow: 0 1px 5px #00000099;
-    
-    border-radius: 10px;
-    background: url(/src/img/222.jpg) center no-repeat;
-    background-size: cover;
-    
-    position: relative;
-    
-    transition-duration: 300ms;
-    transition-property: transform, box-shadow;
-    transition-timing-function: ease-out;
-    transform: rotate3d(0);
-  }
-  
-  .car:hover {
-    transition-duration: 150ms;
-    box-shadow: 0 5px 20px 5px #00000044;
-  }
-  
-  .car .tab-card {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    
-    background-image: radial-gradient(circle at 50% -20%, #ffffff22, #0000000f);
-  }</style>
-
-  <div class="container">
-  <div class="cars">
-<div class="car">
-
-  
-    <div class="tab-card tab-card1">
-      <div class="title-card">
-        <h3>Профессиональная гигиена</h3>
-        <hr>
-        <div class="tab-intro">Комплексный набор процедур для профилактики и оздоровления органов и тканей
-          полости рта</div>
-      </div>
-
-      <div class="tab-bottom">
-        <div class="doctors-card">
-          <p class="doctors-card__title">Лечащие врачи:</p>
-          <div class="doctors-card__bloor">
-          <div class="doctors-card__wrappers dragscroll">
-            <div class="doctors-card__wrapper ">
-              <div onclick="showModal()" class="doctors-card__item">
-                <img src="../src/img/doctors.png" alt="doctor">
-                <p>Аркадий Мамонов</p>
-              </div>
-            </div>
-       
-        
-            <div class="doctors-card__wrapper">
-              <div href="#" class="doctors-card__item">
-                <img src="../src/img/doctors.png" alt="doctor">
-                <p>Аркадий Мамонов</p>
-              </div>
-            </div>
-          </div>
-          </div>
-
-          </div>
-          <div class="price">
-        <div class="tab-price">
-          Цена: <span>от 18 990 ₽</span>
-        </div>
-        <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M11.5 22C17.2991 22 22 17.2991 22 11.5C22 5.70085 17.2991 1 11.5 1C5.70085 1 1 5.70085 1 11.5C1 17.2991 5.70085 22 11.5 22Z" stroke="white" stroke-width="0.5" stroke-linejoin="round"></path>
-          <path d="M9.92493 16.2251L14.6499 11.5001L9.92493 6.77515" stroke="white" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"></path>
-          </svg>
-      </div>
-      </div>
-
-  </div>
-</div>
-
-<div class="car">
-
-  
-  <div class="tab-card tab-card1">
-    <div class="title-card">
-      <h3>Профессиональная гигиена</h3>
-      <hr>
-      <div class="tab-intro">Комплексный набор процедур для профилактики и оздоровления органов и тканей
-        полости рта</div>
-    </div>
-
-    <div class="tab-bottom">
-      <div class="doctors-card">
-        <p class="doctors-card__title">Лечащие врачи:</p>
-        <div class="doctors-card__bloor">
-        <div class="doctors-card__wrappers dragscroll">
-          <div class="doctors-card__wrapper ">
-            <div onclick="showModal()" class="doctors-card__item">
-              <img src="../src/img/doctors.png" alt="doctor">
-              <p>Аркадий Мамонов</p>
-            </div>
-          </div>
-     
-      
-          <div class="doctors-card__wrapper">
-            <div href="#" class="doctors-card__item">
-              <img src="../src/img/doctors.png" alt="doctor">
-              <p>Аркадий Мамонов</p>
-            </div>
-          </div>
-        </div>
-        </div>
-
-        </div>
-        <div class="price">
-      <div class="tab-price">
-        Цена: <span>от 18 990 ₽</span>
-      </div>
-      <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M11.5 22C17.2991 22 22 17.2991 22 11.5C22 5.70085 17.2991 1 11.5 1C5.70085 1 1 5.70085 1 11.5C1 17.2991 5.70085 22 11.5 22Z" stroke="white" stroke-width="0.5" stroke-linejoin="round"></path>
-        <path d="M9.92493 16.2251L14.6499 11.5001L9.92493 6.77515" stroke="white" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"></path>
-        </svg>
-    </div>
-    </div>
-
-</div>
-</div>-->
   </div>
 </div>
 

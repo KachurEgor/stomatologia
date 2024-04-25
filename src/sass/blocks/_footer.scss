@@ -1,17 +1,28 @@
 
 
 .footer {
-    color: #000;
+    color: rgba(30, 30, 30, 0.6);
     background: #fff;
     font-size: 12px;
     border-radius: 20px 20px 0 0;
+    position: relative;
+    z-index: 1000;
     @include adaptiv-value("padding", 20, 10, 0);  
-    @include adaptiv-value("padding-bottom", 40, 70, 0);   
- 
+   padding-bottom: 10px; 
+   font-weight: 500;
+ a{
+    color: rgba(30, 30, 30, 0.6);
+ }
+ .license2{
+   display: none;
+}
+.politick2{
+    display: none;
+}
     &__wrapper{
         display: flex;
-        flex: 0 1 50%;
-    
+        flex: 0 1 45%;
+        justify-content: space-between;
     }
     &__bottom{
 
@@ -19,6 +30,7 @@ padding-top:20px;
 
         display:flex;
         justify-content: space-between;
+        align-items: center;
         .social{
             display: flex;
             gap: 1rem;
@@ -30,14 +42,19 @@ padding-top:20px;
         gap: 1.5rem;
         @include adaptiv-value("font-size", 14, 12, 0);  
         align-items:end;
+        .footer__mail{
+            color: rgba(30, 30, 30, 0.6);
+        }
         a{
             color: $color-blue;
         }
     }
     &__tel{
-        @include adaptiv-value("font-size", 20, 12, 0);   
-        a{
+        @include adaptiv-value("font-size", 20, 14, 0);   
+        
+        a.footer__tel {
             color: $color-blue;
+            font-weight: 500
         }
        
     }
@@ -47,12 +64,14 @@ padding-top:20px;
     }
     @include adaptiv-value("font-size", 16, 12, 0);
     a{
-        color: $color-text-dark
+        color: #1e1e1e99;
+        font-weight: 500
     }
 }
     &__title{
         @include adaptiv-value("font-size", 22, 16, 0);
         margin-bottom: 20px;
+        font-weight: 500
     }
 }
 
@@ -65,16 +84,22 @@ padding-top:20px;
     }
 }
 .footer__col {
-    flex: 1 1 20%;
+    flex: 0 1 20%;
     img{
         max-width: 200px;
         margin-bottom: 20px;
     }
-    a{
-        color: $color-text-dark;
-    }
+
 }
 
+.footer__colonka{
+
+}
+@media screen and (max-width: 992px) {
+    .footer__col {
+        flex: 0 1 25%;
+    }
+}
 @media screen and (max-width: 655px) {
     .footer{
         &__social{
@@ -82,9 +107,30 @@ padding-top:20px;
         }
         &__cols{
         flex-direction: column;
+        gap: 30px;
+    }
+    &__col{
+        text-align: center;
     }
   
     }
+    .license{
+        display: none;
+    }
+    .license2{
+        display: block;
+        @include adaptiv-value("margin-bottom", 30, 15, 0);
+        @include adaptiv-value("margin-top", 30, 15, 0);
+        font-size: 10px;
+    }
+    .politick {
+        display: none;
+    }
+    .politick2{
+        font-size: 10px;
+        display: block;
+    }
+    
 }
 
 @media screen and (max-width: 390px) {

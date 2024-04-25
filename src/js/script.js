@@ -33,7 +33,20 @@ var acc = document.getElementsByClassName("accordion");
 var i;
 
 for (i = 0; i < acc.length; i++) {
+  
   acc[i].addEventListener("click", function() {
+    // for (i = 0; i < acc.length; i++){
+    //   if(acc[i].className = "accordion active") {
+    //     console.log(`lol`);
+    //   }
+    // }
+    // let mass = Object.values(acc);
+    // mass.forEach(function(elem) {
+    //   if(elem.className = "accordion active"){
+    //     console.log(`lol`);
+    //   }
+      
+    // });
     this.classList.toggle("active");
     var panel = this.nextElementSibling;
     if (panel.style.maxHeight) {
@@ -45,18 +58,20 @@ for (i = 0; i < acc.length; i++) {
 }
 
 
+
+
 /*слайдер вып.работы */
 var mySwiper = new Swiper(".swiper-container", {
   direction: "vertical",
   loop: true,
-  autoplay: {
-    delay: 5000,
-  },
-  pagination:true,
-  pagination: {
+   autoplay: {
+     delay: 5000,
+   },
+  //pagination:true,
+ /* pagination: {
     el: '.swiper-pagination',
     clickable: true,
-  },
+  },*/
   grabCursor: true,
   speed: 1000,
   parallax: true,

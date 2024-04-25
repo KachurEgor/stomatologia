@@ -59,15 +59,19 @@ body {
   @include adaptiv-value("font-size", 40, 25, 0);
   font-weight: 300;
   @include adaptiv-value("margin-bottom", 40, 20, 0);
+
 }
 .stick {
- 
+  margin-top: 15px;
   height: 65px;
   position: sticky;
   top: 20px;
+  font-family: $fonts-inter;
+  font-weight: 600;
 }
 .title2-h2{
   text-align: center;
+  color: $color-title;
 }
 .topbar {
     display: flex;
@@ -82,14 +86,13 @@ body {
   }
   }
   
- 
-  
   .topbar-social {
+    @include adaptiv-value("margin-right", 36, 15, 0);
     -webkit-box-flex: 0;
     -ms-flex: 0 1 10%;
     flex: 0 1 10%;
     margin-left: auto;
-    gap: 1rem;
+    @include adaptiv-value("gap", 15, 8, 0);
     display: flex;
   }
 
@@ -187,16 +190,8 @@ body {
 
   @media screen and (max-width: 442px) {
     .topbar-logo {
-     width: 97px;
+     width: 110px;
   }
   }
 
 
-
-
-
-
-
-
-
-  
